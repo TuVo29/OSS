@@ -29,31 +29,23 @@ if ($id > 0) {
     $message = 'ID sản phẩm không hợp lệ!';
     $message_type = 'error';
 }
+
+$page_title = 'Xóa Sản Phẩm';
+include 'includes/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xóa Sản Phẩm</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>🗑️ Xóa Sản Phẩm</h1>
-            <div class="header-info">Kết quả xóa sản phẩm</div>
-        </header>
+<div class="page-header">
+    <h1>🗑️ Xóa Sản Phẩm</h1>
+    <p>Kết quả xóa sản phẩm</p>
+</div>
 
-        <div class="alert alert-<?php echo $message_type; ?>">
-            <?php echo $message; ?>
+<div class="alert alert-<?php echo $message_type; ?>">
+    <?php echo $message; ?>
         </div>
 
         <div style="text-align: center; padding: 20px;">
-            <p>Chuyển hướng về danh sách sản phẩm...</p>
-            <a href="index.php" class="btn">← Quay Lại Danh Sách</a>
-        </div>
-    </div>
-</body>
-</html>
+    <p>Chuyển hướng về danh sách sản phẩm...</p>
+    <a href="index.php" class="btn">← Quay Lại Danh Sách</a>
+</div>
+
+<?php include 'includes/footer.php'; ?>

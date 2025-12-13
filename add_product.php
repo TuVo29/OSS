@@ -34,30 +34,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
+
+$page_title = 'Thêm Sản Phẩm';
+include 'includes/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm Sản Phẩm</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>➕ Thêm Sản Phẩm Mới</h1>
-            <div class="header-info">Nhập thông tin sản phẩm cần thêm vào kho</div>
-        </header>
+<div class="page-header">
+    <h1>➕ Thêm Sản Phẩm Mới</h1>
+    <p>Nhập thông tin sản phẩm cần thêm vào kho</p>
+</div>
 
-        <?php if ($message): ?>
-            <div class="alert alert-<?php echo $message_type; ?>">
-                <?php echo $message; ?>
-            </div>
-        <?php endif; ?>
+<?php if ($message): ?>
+    <div class="alert alert-<?php echo $message_type; ?>">
+        <?php echo $message; ?>
+    </div>
+<?php endif; ?>
 
-        <div class="form-container">
+<div class="form-container">
             <form method="POST" action="">
                 <div class="form-group">
                     <label for="name">Tên Sản Phẩm <span style="color: red;">*</span></label>
@@ -97,6 +90,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </form>
         </div>
-    </div>
-</body>
-</html>
+
+<?php include 'includes/footer.php'; ?>

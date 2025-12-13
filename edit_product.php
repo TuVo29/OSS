@@ -49,25 +49,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $id > 0) {
         }
     }
 }
+
+$page_title = 'Chỉnh Sửa Sản Phẩm';
+include 'includes/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chỉnh Sửa Sản Phẩm</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>✏️ Chỉnh Sửa Sản Phẩm</h1>
-            <div class="header-info">Cập nhật thông tin sản phẩm</div>
-        </header>
+<div class="page-header">
+    <h1>✏️ Chỉnh Sửa Sản Phẩm</h1>
+    <p>Cập nhật thông tin sản phẩm</p>
+</div>
 
-        <?php if ($message): ?>
-            <div class="alert alert-<?php echo $message_type; ?>">
+<?php if ($message): ?>
+    <div class="alert alert-<?php echo $message_type; ?>">
                 <?php echo $message; ?>
             </div>
         <?php endif; ?>
@@ -125,6 +118,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $id > 0) {
             <a href="index.php" class="btn">← Quay Lại</a>
         </div>
         <?php endif; ?>
-    </div>
-</body>
-</html>
+
+<?php include 'includes/footer.php'; ?>
