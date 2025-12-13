@@ -1,8 +1,8 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 $page_title = 'Cảnh Báo Hàng Sắp Hết';
-include 'includes/header.php';
+include '../includes/header.php';
 
 // Lấy danh sách sản phẩm sắp hết hàng
 $low_stock_sql = "SELECT * FROM products WHERE quantity <= 5 ORDER BY quantity ASC";
@@ -83,4 +83,4 @@ $stats = $conn->query($stats_sql)->fetch_assoc();
     <a href="reports.php" class="btn">Xem Báo Cáo</a>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

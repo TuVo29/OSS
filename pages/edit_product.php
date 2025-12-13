@@ -1,5 +1,5 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 $message = '';
 $message_type = '';
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $id > 0) {
 }
 
 $page_title = 'Chỉnh Sửa Sản Phẩm';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 
 <div class="page-header">
@@ -119,4 +119,4 @@ include 'includes/header.php';
         </div>
         <?php endif; ?>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

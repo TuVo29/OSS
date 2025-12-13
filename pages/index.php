@@ -1,5 +1,5 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 // Lấy danh sách sản phẩm
 $search = isset($_GET['search']) ? $_GET['search'] : '';
@@ -22,7 +22,7 @@ $low_stock_sql = "SELECT COUNT(*) as low_stock FROM products WHERE quantity <= 5
 $low_stock = $conn->query($low_stock_sql)->fetch_assoc();
 
 $page_title = 'Danh Sách Sản Phẩm';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 
 <div class="page-header">
@@ -98,4 +98,4 @@ include 'includes/header.php';
     <?php endif; ?>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

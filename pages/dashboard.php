@@ -1,5 +1,5 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 // Tính toán thống kê chính
 $stats_sql = "SELECT COUNT(*) as total_products, SUM(quantity) as total_quantity, SUM(quantity * unit_price) as total_value FROM products";
@@ -26,7 +26,7 @@ $top_quantity_sql = "SELECT name, quantity, category FROM products ORDER BY quan
 $top_quantity_result = $conn->query($top_quantity_sql);
 
 $page_title = 'Dashboard';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 
 <div class="page-header">
@@ -194,4 +194,4 @@ include 'includes/header.php';
     <a href="low_stock.php" class="btn btn-warning">Xem Hàng Sắp Hết</a>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

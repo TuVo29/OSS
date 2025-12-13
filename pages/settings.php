@@ -1,8 +1,8 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 $page_title = 'Cài Đặt';
-include 'includes/header.php';
+include '../includes/header.php';
 
 // Load settings from JSON file or database
 $settings_file = 'config/settings.json';
@@ -150,4 +150,4 @@ $db_info = $conn->query($db_info_sql)->fetch_assoc();
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

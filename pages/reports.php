@@ -1,8 +1,8 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 $page_title = 'Báo Cáo';
-include 'includes/header.php';
+include '../includes/header.php';
 
 // Tính toán thống kê
 $stats_sql = "SELECT COUNT(*) as total_products, SUM(quantity) as total_quantity, SUM(quantity * unit_price) as total_value FROM products";
@@ -122,4 +122,4 @@ $top_category = $conn->query($top_category_sql)->fetch_assoc();
     <a href="low_stock.php" class="btn btn-warning">Xem Cảnh Báo Hàng</a>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

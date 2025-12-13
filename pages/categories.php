@@ -1,8 +1,8 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 $page_title = 'Quản Lý Danh Mục';
-include 'includes/header.php';
+include '../includes/header.php';
 
 // Handle add category
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) && $_POST['action'] == 'add') {
@@ -99,4 +99,4 @@ $category_stats = $conn->query($category_stats_sql);
     <a href="index.php" class="btn">Xem Sản Phẩm</a>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

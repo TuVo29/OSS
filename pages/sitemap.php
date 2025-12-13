@@ -1,7 +1,7 @@
 <?php
 // Quick access page for testing all new pages
 $page_title = 'Site Map';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 
 <div class="page-header">
@@ -128,4 +128,4 @@ include 'includes/header.php';
     </ul>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

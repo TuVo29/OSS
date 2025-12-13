@@ -1,5 +1,5 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $message = '';
@@ -31,7 +31,7 @@ if ($id > 0) {
 }
 
 $page_title = 'Xóa Sản Phẩm';
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 
 <div class="page-header">
@@ -48,4 +48,4 @@ include 'includes/header.php';
     <a href="index.php" class="btn">← Quay Lại Danh Sách</a>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
