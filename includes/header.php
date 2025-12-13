@@ -39,6 +39,12 @@
                         </a>
                     </li>
                     <li>
+                        <a href="orders.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'orders.php' || basename($_SERVER['PHP_SELF']) == 'add_order.php' || basename($_SERVER['PHP_SELF']) == 'edit_order.php') ? 'active' : ''; ?>">
+                            <span class="icon">🛒</span>
+                            <span class="text">Đơn Hàng</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="reports.php" class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'reports.php') ? 'active' : ''; ?>">
                             <span class="icon">📈</span>
                             <span class="text">Báo Cáo</span>
