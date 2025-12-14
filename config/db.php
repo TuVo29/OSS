@@ -1,9 +1,9 @@
 <?php
 // Cấu hình kết nối database
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'kho_hang');
+define('DB_HOST', 'sql111.infinityfree.com');
+define('DB_USER', 'if0_40681667');
+define('DB_PASS', '291020Vntt');
+define('DB_NAME', 'if0_40681667_oss');
 
 // Kết nối database
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);

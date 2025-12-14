@@ -1,6 +1,4 @@
--- Tạo database
-CREATE DATABASE IF NOT EXISTS kho_hang;
-USE kho_hang;
+
 
 -- Tạo bảng sản phẩm
 CREATE TABLE IF NOT EXISTS products (
@@ -29,7 +27,7 @@ CREATE TABLE IF NOT EXISTS orders (
     customer_email VARCHAR(255),
     customer_phone VARCHAR(20),
     order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    status ENUM('Chờ xử lý', 'Đang giao', 'Hoàn thành', 'Hủy') DEFAULT 'Chờ xử lý',
+    status ENUM('Chờ xử lý', 'Đang giao', 'Hoàn thành', 'Hủy'),
     total_amount DECIMAL(15, 2) NOT NULL DEFAULT 0,
     notes TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
